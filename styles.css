@@ -1018,37 +1018,6 @@ html.ko .fcard p { line-height: 1.7; }
 .spot::after { z-index: -1; background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 50%), rgba(242,160,127,.07), transparent 45%); }
 @media (hover: hover) and (pointer: fine) { .spot:hover::before, .spot:hover::after { opacity: 1; } }
 
-/* ================= 07 영상 ================= */
-.player { position: relative; max-width: 980px; aspect-ratio: 16 / 9; margin: 40px auto 0; border-radius: 24px; overflow: hidden; background: #0B0B0B; box-shadow: 0 0 0 1px rgba(255,255,255,.1), 0 70px 140px -50px rgba(0,0,0,.95), 0 0 140px -50px rgba(217,119,87,.4); }
-.player-fallback { position: absolute; inset: 0; display: grid; place-items: center; background: radial-gradient(55% 60% at 30% 60%, rgba(217,119,87,.2), transparent 70%), radial-gradient(50% 55% at 75% 35%, rgba(170,180,200,.06), transparent 70%), linear-gradient(180deg, #111110, #0A0A0A); }
-.player-ring { position: absolute; inset: 0; width: 100%; height: 100%; }
-.player-ring .ring-arc { stroke-width: 3; }
-.player-ring .ring-a { stroke: rgba(240,239,236,.16); }
-.player-ring .ring-b { stroke: rgba(217,119,87,.3); }
-.player-ring .ring-streak.s1 { stroke-width: 5; stroke-dasharray: 120 1200; stroke-dashoffset: 120; }
-.player-poster { position: absolute; inset: 0; background: center / cover no-repeat; opacity: 0; transition: opacity .8s var(--ease); }
-.player-poster.ok { opacity: 1; }
-.player-fallback { transition: opacity .8s var(--ease); }
-.player.has-poster .player-fallback { opacity: 0; }
-.player-play { position: absolute; left: 50%; top: 50%; width: 104px; height: 104px; margin: -52px 0 0 -52px; display: grid; place-items: center; border: 0; border-radius: 50%; background: rgba(255,255,255,.94); color: #0B0B0B; cursor: pointer; box-shadow: 0 24px 60px -12px rgba(0,0,0,.7); transition: transform .35s var(--ease), background-color .3s; }
-.player-play svg { width: 34px; height: 34px; margin-left: 5px; }
-.player-play:hover { transform: scale(1.06); }
-.pp-ring { position: absolute; inset: -12px; border-radius: 50%; box-shadow: 0 0 0 1px rgba(255,255,255,.3); animation: pp-pulse 2.6s ease-out infinite; }
-@keyframes pp-pulse { 0% { transform: scale(.9); opacity: .9; } 100% { transform: scale(1.35); opacity: 0; } }
-.player.is-soon .player-play { background: rgba(255,255,255,.1); color: var(--tx3); cursor: default; box-shadow: inset 0 0 0 1px var(--hair2); }
-.player.is-soon .player-play:hover { transform: none; }
-.player.is-soon .pp-ring { display: none; }
-.player-soon { position: absolute; left: 0; right: 0; top: calc(50% + 74px); text-align: center; font: 600 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--tx2); }
-html.ko .player-soon { letter-spacing: .02em; font-size: 13px; }
-.player-meta { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); display: flex; gap: 14px; padding: 6px 12px; border-radius: 999px; background: rgba(10,10,10,.6); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); font: 500 12px var(--mono); color: rgba(255,255,255,.85); white-space: nowrap; }
-/* 포스터가 있으면 재생 단추는 어두운 유리 — 포스터 가운데의 밝은 카드 위에서도 보이게 */
-.player.has-poster .player-play { background: rgba(12,12,12,.62); color: #fff; -webkit-backdrop-filter: blur(12px) saturate(140%); backdrop-filter: blur(12px) saturate(140%); box-shadow: 0 0 0 1.5px rgba(255,255,255,.55), 0 24px 60px -12px rgba(0,0,0,.75); }
-.player.has-poster .player-play:hover { background: rgba(12,12,12,.78); }
-.player.has-poster .pp-ring { box-shadow: 0 0 0 1px rgba(255,255,255,.45); }
-.player.is-soon .player-meta { display: none; }
-.player video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
-.player.is-playing .player-play, .player.is-playing .player-meta, .player.is-playing .player-poster { display: none; }
-
 /* ================= 08 시작하기 · 자주 묻는 질문 ================= */
 .start-grid { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
 .isteps { display: flex; flex-direction: column; gap: 10px; }
@@ -1217,10 +1186,6 @@ html.ko .final-h { font-size: clamp(40px, 7.4vw, 106px); font-weight: 720; line-
   .is-dl { display: block; }
   .is-dl > .is-row { margin-top: 12px; }
   .demo-prog { width: 140px; }
-  .player { border-radius: 16px; }
-  .player-play { width: 76px; height: 76px; margin: -38px 0 0 -38px; }
-  .player-play svg { width: 26px; height: 26px; }
-  .player-soon { top: calc(50% + 56px); }
   .foot-in { grid-template-columns: minmax(0,1fr); }
 }
 @media (max-width: 559px) {

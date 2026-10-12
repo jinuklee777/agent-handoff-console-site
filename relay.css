@@ -171,9 +171,6 @@ html.ko .ap-lit { line-height: 1.32; letter-spacing: -.04em; }
 .cred .ap-stat { border-top-color: rgba(251,191,36,.35); }
 .ap-zero .ap-stat { border-top-color: rgba(52,211,153,.35); }
 
-/* ---------- 영상 ---------- */
-.film.ap-sec .player { margin-top: 52px; max-width: 1080px; border-radius: 22px; }
-
 /* ---------- API 크레딧 ---------- */
 .cred .cred-stage { margin-top: 84px; }
 .cred .csteps { margin-top: 64px; gap: 16px; }

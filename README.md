@@ -23,10 +23,6 @@ Then open http://localhost:4325. Add `?lang=ko` or `?lang=en` to pick a language
   python3 tools/stamp-assets.py
   ```
 
-## Promo video
-
-The video panel plays `assets/video/promo-en.mp4` or `assets/video/promo-ko.mp4` for the page's language, with `poster-en.jpg` / `poster-ko.jpg` shown before playback. The video files are not in this repository; until they are added, the panel says the video is coming soon. GitHub rejects files over 100 MB.
-
 ## Publishing
 
 The page works from any static host, for example GitHub Pages from the repository root. The share-preview tags (`og:image`, `twitter:image`) use relative paths for now. Once the address is final, change them to absolute URLs and add `og:url`; the HTML comment near the top of `index.html` marks the place.
